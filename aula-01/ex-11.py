@@ -13,9 +13,12 @@ Atenção: ao buscar as fórmulas para utilizar no problema, busque pela fórmul
 
 valor_aplicacao = float(input('Qual valor irá aplicar? R$ '))
 taxa_juros = float(input('Qual a taxa de juros ao mês (em %)? '))
-tempo = float(input('Por quantos meses irá aplicar? '))
+tempo = int(input('Por quantos meses irá aplicar? '))
 
-valor_total = valor_aplicacao * ((1 + taxa_juros) ** tempo)
+valor_total = valor_aplicacao * (1 + taxa_juros / 100) ** tempo
 valor_juros = valor_total - valor_aplicacao
+rendimento_total = valor_juros * 100 / valor_aplicacao
 
-print(f'O valor total a ser sacado ao final da aplicação é de R$ {valor_total:.2f}.\nO valor recebido apenas dos juros é de R$ {valor_juros:.2f}.\nNo total a aplicação rendeu R$ ')
+print(f'O valor total a ser sacado ao final da aplicação é de R$ {valor_total:.2f}.')
+print(f'O valor recebido apenas dos juros é de R$ {valor_juros:.2f}.')
+print(f'No total, a aplicação rendeu {rendimento_total:.2f} %.')
