@@ -4,4 +4,4 @@ print('Hello, world!')
 
 # python não adota pontuação no final do código / linha
 
-f string agora é usado no lugar de format
+# f string agora é usado no lugar de format
