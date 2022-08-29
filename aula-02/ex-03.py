@@ -9,7 +9,7 @@ Faça um programa que pergunta o nome da usuária e o horário do dia (apenas ho
 
 nome = input('Qual o seu nome? ')
 
-horario = int(input('Qual o horário nesse exato momento? '))
+horario = int(input('Qual o horário agora? '))
 
 if 4 <= horario <= 11:
 

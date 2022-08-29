@@ -8,7 +8,15 @@ Porém existe uma exceção: anos divisíveis por 100 não são bissextos. O ano
 A exceção possui uma exceção: anos divisíveis por 400 são bissextos. O ano 2000, por exemplo, é divisível por 100. Porém, como ele também é divisível por 400, ele torna-se bissexto.
 '''
 
-ano = float(input('Informe um ano qualquer: '))
+ano = int(input('Informe um ano qualquer: '))
+
+if ano % 4 == 0 and ano % 100 != 0 or ano % 400 == 0:
+
+    print(f'Esse ano é BISSEXTO!')
+
+else:
+
+    print(f'Esse ano NÃO é BISSEXTO!')
 
 # print('ano / 4 = ', (ano / 4))
 # print('ano % 4 = ', (ano % 4))
@@ -19,6 +27,7 @@ ano = float(input('Informe um ano qualquer: '))
 # print('ano / 400 = ', (ano / 400))
 # print('ano % 400 = ', (ano % 400))
 
+'''
 if (ano % 4) != 0:
     print('Esse ano NÃO é bissexto!')
 elif (ano % 4) == 0 and (ano % 100) == 0:
@@ -30,3 +39,4 @@ elif (ano % 4) == 0 and (ano % 100) == 0:
 #     print('Esse ano é bissexto!')
 else:
     print('Esse ano é bissexto!')
+'''

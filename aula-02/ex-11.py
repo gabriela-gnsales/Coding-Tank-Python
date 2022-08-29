@@ -25,36 +25,61 @@ dinheiro = float(input('Quanto dinheiro você possui? R$ '))
 tempo_aplicacao = int(input('Por quantos anos deseja aplicar esse dinheiro? '))
 
 if fundo == 'A':
+
     if dinheiro >= 50:
+
         valor_total = dinheiro * (1 + 10 / 100) ** tempo_aplicacao
+
         print(f'O valor total a ser sacado ao final da aplicação é de R$ {valor_total:.2f}.')
+
     else:
+
         print('Não é possível realizar essa aplicação.')
 
 if fundo == 'B':
+
     if dinheiro >= 100 and tempo_aplicacao >= 1:
+
         valor_total = dinheiro * (1 + 12 / 100) ** tempo_aplicacao
+
         print(f'O valor total a ser sacado ao final da aplicação é de R$ {valor_total:.2f}.')
+
     else:
+
         print('Não é possível realizar essa aplicação.')
 
 if fundo == 'C':
+
     if dinheiro >= 500 and tempo_aplicacao >= 2:
+
         valor_total = dinheiro * (1 + 13 / 100) ** tempo_aplicacao
+
         print(f'O valor total a ser sacado ao final da aplicação é de R$ {valor_total:.2f}.')
+
     else:
+
         print('Não é possível realizar essa aplicação.')
 
 if fundo == 'D':
+
     if dinheiro >= 1000 and tempo_aplicacao >= 3:
+
         valor_total = dinheiro * (1 + 15 / 100) ** tempo_aplicacao
+
         print(f'O valor total a ser sacado ao final da aplicação é de R$ {valor_total:.2f}.')
+
     else:
+
         print('Não é possível realizar essa aplicação.')
 
 if fundo == 'E':
+
     if dinheiro >= 3000 and tempo_aplicacao >= 5:
+
         valor_total = dinheiro * (1 + 18 / 100) ** tempo_aplicacao
+
         print(f'O valor total a ser sacado ao final da aplicação é de R$ {valor_total:.2f}.')
+
     else:
+
         print('Não é possível realizar essa aplicação.')

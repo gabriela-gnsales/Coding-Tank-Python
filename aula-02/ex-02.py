@@ -1,6 +1,6 @@
 # Faça um programa que pede para a usuária digitar um número e responde se o número é par ou ímpar.
 
-numero = float(input('Digite um número: '))
+numero = int(input('Digite um número: '))
 
 if numero % 2 == 0:
 
