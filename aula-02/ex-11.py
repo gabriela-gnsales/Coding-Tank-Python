@@ -20,66 +20,78 @@ Caso contrário, exiba a mensagem Não é possível realizar essa aplicação.
 
 fundo = input('Em qual fundo de renda fixa você deseja aplicar seu dinheiro (A, B, C, D ou E)? ').upper()
 
-dinheiro = float(input('Quanto dinheiro você possui? R$ '))
+if fundo != 'A' and fundo != 'B' and fundo != 'C' and fundo != 'D' and fundo != 'E':
+    print('Opção inválida.')
+else:
+    dinheiro = float(input('Quanto dinheiro você possui? R$ '))
+    tempo_aplicacao = int(input('Por quantos anos deseja aplicar esse dinheiro? '))
 
-tempo_aplicacao = int(input('Por quantos anos deseja aplicar esse dinheiro? '))
-
-if fundo == 'A':
-
-    if dinheiro >= 50:
-
-        valor_total = dinheiro * (1 + 10 / 100) ** tempo_aplicacao
-
-        print(f'O valor total a ser sacado ao final da aplicação é de R$ {valor_total:.2f}.')
-
+    if fundo == 'A':
+        if dinheiro >= 50 and tempo_aplicacao >= 0:
+            valor_total = dinheiro * (1 + 10 / 100) ** tempo_aplicacao
+            print(f'O valor total a ser sacado ao final da aplicação é de R$ {valor_total:.02f}.')
+        else:
+            print('Não é possível realizar essa aplicação.')
+    elif fundo == 'B':
+        if dinheiro >= 100 and tempo_aplicacao >= 1:
+            valor_total = dinheiro * (1 + 12 / 100) ** tempo_aplicacao
+            print(f'O valor total a ser sacado ao final da aplicação é de R$ {valor_total:.02f}.')
+        else:
+            print('Não é possível realizar essa aplicação.')
+    elif fundo == 'C':
+        if dinheiro >= 500 and tempo_aplicacao >= 2:
+            valor_total = dinheiro * (1 + 13 / 100) ** tempo_aplicacao
+            print(f'O valor total a ser sacado ao final da aplicação é de R$ {valor_total:.02f}.')
+        else:
+            print('Não é possível realizar essa aplicação.')
+    elif fundo == 'D':
+        if dinheiro >= 1000 and tempo_aplicacao >= 3:
+            valor_total = dinheiro * (1 + 15 / 100) ** tempo_aplicacao
+            print(f'O valor total a ser sacado ao final da aplicação é de R$ {valor_total:.02f}.')
+        else:
+            print('Não é possível realizar essa aplicação.')
+    # elif fundo == 'E':
     else:
+        if dinheiro >= 3000 and tempo_aplicacao >= 5:
+            valor_total = dinheiro * (1 + 18 / 100) ** tempo_aplicacao
+            print(f'O valor total a ser sacado ao final da aplicação é de R$ {valor_total:.02f}.')
+        else:
+            print('Não é possível realizar essa aplicação.')
 
-        print('Não é possível realizar essa aplicação.')
+# else:
+#
+#     print('Opção inválida.')
 
-if fundo == 'B':
+'''
+fundo_a = fundo == 'A' and aplicacao >= 50 and tempo >= 0
 
-    if dinheiro >= 100 and tempo_aplicacao >= 1:
+fundo_b = fundo == 'B' and aplicacao >= 100 and tempo >= 1
 
-        valor_total = dinheiro * (1 + 12 / 100) ** tempo_aplicacao
+fundo_c = fundo == 'C' and aplicacao >= 500 and tempo >= 2
 
-        print(f'O valor total a ser sacado ao final da aplicação é de R$ {valor_total:.2f}.')
+fundo_d = fundo == 'D' and aplicacao >= 1000 and tempo >= 3
 
-    else:
+fundo_e = fundo == 'E' and aplicacao >= 3000 and tempo >= 5
 
-        print('Não é possível realizar essa aplicação.')
+if fundo_a or fundo_b or fundo_c or fundo_d or fundo_e:
 
-if fundo == 'C':
+if fundo_a:
 
-    if dinheiro >= 500 and tempo_aplicacao >= 2:
+    juros = 0.1
 
-        valor_total = dinheiro * (1 + 13 / 100) ** tempo_aplicacao
+elif fundo_b:
 
-        print(f'O valor total a ser sacado ao final da aplicação é de R$ {valor_total:.2f}.')
+    juros = 0.12
 
-    else:
+elif fundo_c:
 
-        print('Não é possível realizar essa aplicação.')
+    juros = 0.13
 
-if fundo == 'D':
+elif fundo_d:
 
-    if dinheiro >= 1000 and tempo_aplicacao >= 3:
+    juros = 0.15
 
-        valor_total = dinheiro * (1 + 15 / 100) ** tempo_aplicacao
+else:
 
-        print(f'O valor total a ser sacado ao final da aplicação é de R$ {valor_total:.2f}.')
-
-    else:
-
-        print('Não é possível realizar essa aplicação.')
-
-if fundo == 'E':
-
-    if dinheiro >= 3000 and tempo_aplicacao >= 5:
-
-        valor_total = dinheiro * (1 + 18 / 100) ** tempo_aplicacao
-
-        print(f'O valor total a ser sacado ao final da aplicação é de R$ {valor_total:.2f}.')
-
-    else:
-
-        print('Não é possível realizar essa aplicação.')
+    juros = 0.18
+'''

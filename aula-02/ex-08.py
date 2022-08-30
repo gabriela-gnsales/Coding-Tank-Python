@@ -16,7 +16,7 @@ lado3 = float(input('Qual o comprimento do lado 3 do triângulo? '))
 
 if lado1 < (lado2 + lado3) and lado2 < (lado1 + lado3) and lado3 < (lado1 + lado2):
 
-    if lado1 == lado2 and lado1 == lado3:
+    if lado1 == lado2 == lado3:  # lado1 == lado2 and lado1 == lado3:
 
         print('É um triângulo equilátero.')
 
@@ -31,3 +31,18 @@ if lado1 < (lado2 + lado3) and lado2 < (lado1 + lado3) and lado3 < (lado1 + lado
 else:
 
     print('Não é um triângulo!')
+
+'''
+dá pra fazer algo como:
+
+if lado1 < lado2 + lado3 AND...: é triângulo
+
+ou:
+
+if lado1 >= lado2 + lado3 OR....: não é triângulo
+
+Quando queremos inverter um "or", a gente inverte as duas afirmações e transforma o or em and, e vice-versa:
+
+not(A or B) = (not A) and (not B)
+not(A and B) = (not A) or (not B)
+'''
