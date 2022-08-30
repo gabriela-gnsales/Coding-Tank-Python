@@ -5,3 +5,7 @@ print('Hello, world!')
 # python não adota pontuação no final do código / linha
 
 # f string agora é usado no lugar de format
+
+# pattern matching -> recurso pra ter o switch case
+
+# off-by-one error
