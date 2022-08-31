@@ -6,9 +6,9 @@ numero_final = int(input('Informe o número (inteiro positivo) final da lista: '
 
 passo = int(input('Informe o "passo" (inteiro positivo), ou seja, de quantas em quantas unidades a contagem irá saltar: '))
 
-while numero_inicial <= 0 or numero_final <= 0 or passo <= 0:
+while numero_inicial < 0 or numero_final < 0 or passo < 0:
 
-    print('ERRO! Os dois números devem ser inteiros positivos.')
+    print('ERRO! Os números devem ser inteiros positivos.')
 
     numero_inicial = int(input('Informe novamente o número inicial: '))
 
@@ -16,22 +16,18 @@ while numero_inicial <= 0 or numero_final <= 0 or passo <= 0:
 
     passo = int(input('Informe novamente o passo: '))
 
-while numero_inicial > numero_final:
+if numero_inicial < numero_final:
 
-    print('ERRO! O número inicial é maior que o número final.')
+    while numero_inicial <= numero_final:
 
-    numero_inicial = int(input('Informe novamente o número inicial: '))
+        print(numero_inicial)
 
-    numero_final = int(input('Informe novamente o número final: '))
+        numero_inicial += passo
 
-while passo > numero_inicial - numero_final:
+else:
 
-    print('ERRO! O passo não é um valor válido.')
+    while numero_inicial >= numero_final:
 
-    passo = int(input('Informe novamente o passo: '))
+        print(numero_inicial)
 
-while numero_inicial <= numero_final:
-
-    print(numero_inicial)
-
-    numero_inicial += passo
+        numero_inicial -= passo

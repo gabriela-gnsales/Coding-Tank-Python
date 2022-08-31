@@ -2,7 +2,7 @@
 
 numero = int(input('Informe um número inteiro positivo: '))
 
-while numero <= 0:
+while numero < 0:
 
     print('ERRO! O número deve ser um inteiro positivo.')
 
