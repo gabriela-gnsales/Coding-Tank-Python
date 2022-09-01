@@ -12,11 +12,11 @@ ano = int(input('Informe um ano qualquer: '))
 
 if ano % 4 == 0 and ano % 100 != 0 or ano % 400 == 0:
 
-    print(f'Esse ano é BISSEXTO!')
+    print('Esse ano é BISSEXTO!')
 
 else:
 
-    print(f'Esse ano NÃO é BISSEXTO!')
+    print('Esse ano NÃO é BISSEXTO!')
 
 # print('ano / 4 = ', (ano / 4))
 # print('ano % 4 = ', (ano % 4))

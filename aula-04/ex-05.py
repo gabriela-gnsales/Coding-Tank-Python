@@ -9,18 +9,12 @@ O seu programa deverá calcular e exibir os "n" termos solicitados pela usuária
 '''
 
 razao = int(input('Qual o valor da razão da P.A.? '))
-termo_i = int(input('Qual o termo inicial da P.A.? '))
-termo_f = int(input('Quantos termos dessa P.A. você gostaria de ver na tela? '))
+termo_i = int(input('Qual o valor do termo inicial da P.A.? '))
+n_termos = int(input('Quantos termos dessa P.A. você gostaria de ver na tela? '))
 
-for n in range(1, termo_f+1):
-    if n == 1:
-        termo_n = termo_i
-    else:
-        termo_n = termo_i + razao
-    print(f'{n:2}º termo da P.A.: {termo_n}')
-    termo_i = termo_n
-'''
-for n in range(1, termo_f+1):
-    termo_n = termo_i + (n-1) * razao
-    print(f'a_{n} = {termo_n}')
-'''
+termo_f = termo_i + (n_termos-1) * razao
+
+for i in range(termo_i, termo_f+1, razao):
+    print(f'{i} -> ', end='')
+
+print('FIM')
