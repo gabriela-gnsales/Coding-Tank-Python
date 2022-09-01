@@ -20,7 +20,7 @@ print('JOGO DA ADIVINHAÇÃO')
 
 print('=-' * 10)
 
-max = 5
+max = 100
 
 sorteio = random.randint(1, max)
 
@@ -33,6 +33,14 @@ while resposta == 1:
     while numero != sorteio:
 
         print('ERROU. Tente novamente!')
+
+        if numero > sorteio:
+
+            print('DICA: o número sorteado é MENOR que esse.')
+
+        else:
+
+            print('DICA: o número sorteado é MAIOR que esse.')
 
         numero = int(input('Qual número você acha que o computador sorteou? '))
 

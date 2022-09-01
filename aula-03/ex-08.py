@@ -4,21 +4,29 @@ Iremos novamente fazer o programa da média do exercício anterior, mas com uma 
 Atenção: o número negativo não deve ser considerado uma nota (portanto, não deve interferir na média).
 '''
 
-nota = 1
+nota = 0
 
-i = 1
+# i = 1
+
+i = 0
 
 soma_notas = 0
 
 while nota >= 0:
 
+    soma_notas += nota
+
+    i += 1
+
     nota = float(input(f'Informe a nota da {i}ª prova (para sair digite um valor negativo): '))
 
-    if nota >= 0:
+    # if nota >= 0:
+    #
+    #     soma_notas += nota
+    #
+    #     i += 1
 
-        soma_notas += nota
-
-        i += 1
+# media_notas = soma_notas / (i - 1)
 
 media_notas = soma_notas / (i - 1)
 

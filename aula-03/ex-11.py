@@ -8,11 +8,11 @@ valor = float(input('Qual valor deseja aplicar? R$ '))
 
 taxa_juros = float(input('Qual a taxa de juros ao mês (em %)? '))
 
-tempo = int(input('Por quantos meses quer deixar seu dinheiro aplicado? '))
+tempo = int(input('Por quantos meses deixará seu dinheiro aplicado? '))
 
 i = 1
 
-print('=-' * 22)
+print('=-' * 25)
 
 while tempo > 0:
 
@@ -28,4 +28,4 @@ while tempo > 0:
 
     valor = saldo
 
-print('=-' * 22)
+print('=-' * 25)

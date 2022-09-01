@@ -8,10 +8,29 @@ Faça um programa que pergunta o nome e o gênero da pessoa que está utilizando
 Caso uma opção diferente das listadas acima seja digitada, o programa deverá repetir a pergunta até que uma das opções válidas seja digitada.
 '''
 
-nome = input('Qual o seu nome? ')
+nome = input('Qual o seu nome? ').strip().capitalize()
 
-genero = input('Qual o seu gênero (M, F, Neutro ou Outro)? ').lower()
+genero = input('Qual o seu gênero (M, F, Neutro ou Outro)? ').strip().lower()
 
+while genero != 'm' and genero != 'f' and genero != 'neutro' and genero != 'outro':
+
+    print('Opção de gênero inválida!')
+
+    genero = input('Qual o seu gênero (M, F, Neutro ou Outro)? ').strip().lower()
+
+if genero == 'm':
+
+    print(f'Seja bem-vindo, {nome}!')
+
+elif genero == 'f':
+
+    print(f'Seja bem-vinda, {nome}!')
+
+else:
+
+    print(f'Seja bem-vind@, {nome}!')
+
+'''
 opcao = 1
 
 while opcao == 1:
@@ -47,3 +66,4 @@ while opcao == 1:
             if genero == 'm' or genero == 'f' or genero == 'neutro' or genero == 'outro':
 
                 opcao = 1
+'''
