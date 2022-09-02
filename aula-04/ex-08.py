@@ -10,11 +10,11 @@ print('Fórmula de Leibniz:')
 
 soma = 0
 for i in range(numero):
-    n = (-1)**i
-    d = 2*i + 1
-    res = n / d
-    print(f'({n}/{d}) + ', end='')
-    soma += res
+    numerador = (-1)**i
+    denominador = 2*i + 1
+    resultado = numerador / denominador
+    print(f'({numerador}/{denominador}) + ', end='')
+    soma += resultado
 
 print('...')
 
