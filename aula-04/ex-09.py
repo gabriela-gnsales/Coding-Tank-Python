@@ -19,7 +19,7 @@ for i in range(num_provas):
     else:
         if nota > maior:
             maior = nota
-        elif nota < menor:
+        if nota < menor:
             menor = nota
 
 print('-' * 22)

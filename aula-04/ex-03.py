@@ -8,12 +8,22 @@ while numero < 0:
     print('Opção inválida!')
     numero = int(input('Informe um número inteiro positivo: '))
 
+print(f'Fatorial: {numero}! = ', end='')
 fatorial = 1
 for i in range(1, numero+1):
+    print(i, end='')
+    print(' x ' if i < numero else ' = ', end='')
     fatorial *= i
-    if i != numero:
-        print(f'{i} x ', end='')
-    else:
-        print(f'{i}')
+print(fatorial)
 
-print(f'Fatorial: {numero}! = {fatorial}')
+print('-' * 50)
+
+# OUTRO MODO DE EXIBIÇÃO
+
+print(f'Fatorial: {numero}! = ', end='')
+fatorial = 1
+for i in range(numero, 0, -1):
+    print(i, end='')
+    print(' x ' if i > 1 else ' = ', end='')
+    fatorial *= i
+print(fatorial)
