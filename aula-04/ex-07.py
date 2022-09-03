@@ -17,3 +17,16 @@ for i in range(numero):
     n2 = n
 
 print('FIM')
+
+'''
+RESOLUÇÃO PROFESSOR DANIEL
+
+quantidade_termos = int(input("Digite a quantidade de termos para a Fibonacci: "))
+primeiro_termo = 0
+segundo_termo = 1
+for i in range(0,quantidade_termos):
+    soma_primeiro_segundo = primeiro_termo + segundo_termo
+    primeiro_termo = segundo_termo
+    segundo_termo = soma_primeiro_segundo
+    print("Termo ", i, " da Fibonacci é: ", primeiro_termo)
+'''

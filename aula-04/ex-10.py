@@ -12,3 +12,13 @@ for i in range(expoente-1):
     n *= base
 
 print(f'Resultado da operação de potência: {n:.1f}')
+
+'''
+base = int(input("Digite a base: "))
+expoente = int(input("Digite o expoente: "))
+
+total = 1
+for i in range(0, expoente):
+    total = base * total
+    print(total)
+'''
