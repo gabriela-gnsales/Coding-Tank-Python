@@ -24,20 +24,20 @@ Faça um programa que pergunta:
 O seu programa deverá imprimir na tela uma "tabela" mostrando, mês a mês, o saldo devedor, juros, amortização e o valor da prestação.
 '''
 
-print('\033[1;33m*' * 20, 'TABELA PRICE', '*' * 20, '\033[m')
+print('\033[1;33m*' * 28, 'TABELA PRICE', '*' * 28, '\033[m')
 
-valor_emprestimo = float(input('Informe o valor do empéstimo: '))
+valor_emprestimo = float(input('Informe o valor do empréstimo: '))
 taxa_juros = float(input('Informe o valor da taxa de juros (em %) do empréstimo: ')) / 100
 tempo_pagamento = int(input('Informe o tempo (em meses) para pagamento: '))  # número de parcelas
 
 n = (1 + taxa_juros)**tempo_pagamento
 prestacao = valor_emprestimo * ((n * taxa_juros) / (n - 1))  # valor fixo a ser pago por mês
 
-print('\033[1;33m-\033[m' * 54)
+print('\033[1;33m-\033[m' * 70)
 
 # print('Mês | Prestação (R$) | Juros (R$) | Amortização (R$) | Saldo devedor (R$)')
 
-print('Mês | Prestação     | Juros         | Amortização   | Saldo devedor')
+print('\033[1;32mMês\033[m | \033[1;32mPrestação\033[m     | \033[1;32mJuros\033[m         | \033[1;32mAmortização\033[m   | \033[1;32mSaldo devedor\033[m')
 
 saldo_devedor = valor_emprestimo
 
@@ -47,6 +47,6 @@ for i in range(tempo_pagamento):
     amortizacao = prestacao - juros
     saldo_devedor -= amortizacao
 
-    print(f'{(i+1):^3} | R$ {prestacao:>10.2f} | R$ {juros:<10.2f} | R$ {amortizacao:<10.2f} | R$ {saldo_devedor:<10.2f}')
+    print(f'{(i+1):^3} | R$ {prestacao:^10.2f} | R$ {juros:^10.2f} | R$ {amortizacao:^10.2f} | R$ {saldo_devedor:^10.2f}')
 
-print('\033[1;33m-\033[m' * 54)
+print('\033[1;33m-\033[m' * 70)
