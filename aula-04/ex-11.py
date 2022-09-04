@@ -35,8 +35,6 @@ prestacao = valor_emprestimo * ((n * taxa_juros) / (n - 1))  # valor fixo a ser 
 
 print('\033[1;33m-\033[m' * 70)
 
-# print('Mês | Prestação (R$) | Juros (R$) | Amortização (R$) | Saldo devedor (R$)')
-
 print('\033[1;32mMês\033[m | \033[1;32mPrestação\033[m     | \033[1;32mJuros\033[m         | \033[1;32mAmortização\033[m   | \033[1;32mSaldo devedor\033[m')
 
 saldo_devedor = valor_emprestimo

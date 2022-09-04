@@ -18,4 +18,4 @@ for i in range(numero):
 
 print('...')
 
-print(f'π = {(soma * 4):.4f}')
+print(f'π ~ {(soma * 4):.4f}')
