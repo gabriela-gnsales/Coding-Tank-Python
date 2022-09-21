@@ -40,5 +40,5 @@ else:
 print('*' * 100)
 cadastro = [matricula, nome, notas, media, percentual_presencas, status]
 
-print('Cadastro aluno(a): nº da matrícula, nome, lista de notas, média das notas, percentual de presença, status')
+print('Cadastro aluno(a): nº da matrícula, nome, lista de notas, média das notas, percentual de presença, status aprovação')
 print('Cadastro aluno(a):', cadastro)
