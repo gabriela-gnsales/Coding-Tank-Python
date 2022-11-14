@@ -5,9 +5,7 @@ Seu programa deverá exibir quanto de juros será pago e o saldo total em cada m
 '''
 
 valor = float(input('Qual valor deseja aplicar? R$ '))
-
 taxa_juros = float(input('Qual a taxa de juros ao mês (em %)? '))
-
 tempo = int(input('Por quantos meses deixará seu dinheiro aplicado? '))
 
 i = 1
